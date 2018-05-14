@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Onblur in validation in javascript</title>
+		<link rel="stylesheet" type="text/css" href="/home/nsds/maps clone/onblure.css">
+		<script type="text/javascript" src="/home/nsds/maps clone/onblure.js"></script>
+	</head>
+	<body>
+		<div id="form_container">
+			<h2 id="title">Company</h2>
+			<form id="form" action="" accept-charset="UTF-8" method="" name="myForm" onsubmit="return validateForm()">
+
+				<ul class="errorMessages"></ul>
+				
+				<!-- This is to provide a "name" for the js to pull from in the error report once submitted-->
+				<label for="fname">first name:</label>
+				<input id="fname" name="fname" type="text" onblur="requiredfname(this)" placeholder="first name" >
+				<p id="errorfname" class="text_color">   </p>
+				<label for="lname">last name:</label>
+				<input id="lname" name="lname" type="text" onblur="requiredlname(this)" placeholder="last name" >
+				<p id="errorlname" class="text_color">   </p>
+				<label for="email">email:</label>
+				<input id="email" type="email" onblur="requiredemail(this)" placeholder="email" >
+				<p id="erroremail" class="text_color">   </p>
+				<button type="submit">
+					<span>submit <i class="fa fa-bolt"></i></span>
+				</button>
+			</form>
+		</div>
+	</body>
+</html>
+
+
+
